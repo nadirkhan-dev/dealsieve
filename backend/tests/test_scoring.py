@@ -116,3 +116,47 @@ def test_franchise_brand_in_page_title_is_detected():
     s = extract_signals(crawl, today=TODAY, company_name="Boise Drain Pros")
     assert s["franchise"] is True
     assert s["evidence"]["franchise"]["page"] == "home"
+
+
+# ---- weak franchise wording needs corroboration ----------------------------
+# "locally/independently owned and operated" is what independent businesses say
+# to distinguish themselves from chains, so on its own it must not cost points.
+
+def _page(html, name):
+    crawl = {"reachable": True, "https": True,
+             "pages": {"home": {"url": "https://example.test/", "html": html}}}
+    return extract_signals(crawl, today=TODAY, company_name=name)
+
+
+def test_locally_owned_alone_is_not_a_franchise():
+    s = _page("""<html><head><title>Alvarez Family Heating &amp; Cooling</title></head>
+        <body><h1>Alvarez Family Heating &amp; Cooling</h1>
+        <p>Locally owned and operated since 1985. Three generations of the
+        Alvarez family have kept Tucson comfortable.</p></body></html>""",
+        "Alvarez Family Heating & Cooling")
+    assert s["franchise"] is False
+    assert "franchise" not in s["evidence"]
+    assert s["founded_year"] == 1985  # the rest of extraction still works
+
+
+def test_independently_owned_franchise_disclaimer_is_a_franchise():
+    s = _page("""<html><head><title>Harbor Point Pest Control</title></head>
+        <body><p>Each location is an independently owned and operated franchise.
+        </p></body></html>""", "Harbor Point Pest Control")
+    assert s["franchise"] is True
+
+
+def test_weak_phrase_counts_when_the_page_says_franchise():
+    s = _page("""<html><head><title>Cascade Home Services</title></head>
+        <body><p>Locally owned and operated.</p>
+        <p>Interested in joining our franchise network? Ask about franchise terms.</p>
+        </body></html>""", "Cascade Home Services")
+    assert s["franchise"] is True
+    assert "owned and operated" in s["evidence"]["franchise"]["text"].lower()
+
+
+def test_weak_phrase_counts_when_the_page_names_a_known_brand():
+    s = _page("""<html><head><title>Cascade Home Services</title></head>
+        <body><p>Locally owned and operated, part of the Molly Maid network.</p>
+        </body></html>""", "Cascade Home Services")
+    assert s["franchise"] is True

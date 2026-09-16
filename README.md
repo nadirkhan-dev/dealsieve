@@ -78,7 +78,7 @@ flowchart LR
 | ORM | SQLAlchemy 2.0 | Same code on SQLite (dev) and Postgres (prod) |
 | Database | **PostgreSQL 16** in production (Neon or Supabase), SQLite locally | JSON columns for signals, zero-setup local dev |
 | AI | Anthropic Messages API (`claude-sonnet-4-6`), optional | Used only for writing, never for the score |
-| Tests / CI | pytest, GitHub Actions | 19 tests covering import, extraction, scoring, franchise detection, demo seeding and the full API flow |
+| Tests / CI | pytest, GitHub Actions | 23 tests covering import, extraction, scoring, franchise detection, demo seeding and the full API flow |
 | Packaging | Multi-stage Dockerfile (Node build → Python slim) | One image serves API and static app |
 
 ### Data storage
@@ -190,6 +190,16 @@ against the company name and the home page `<title>` — deliberately not agains
 page text, so a local shop advertising "cheaper than Roto-Rooter" is not
 penalised for naming a competitor. Matching on the name also works when a site
 cannot be crawled at all, which is what now catches TruGreen behind its 403.
+
+The phrases "locally owned and operated" and "independently owned and operated"
+are handled more carefully, because independent businesses use them constantly
+to distinguish themselves from the chains — and those are precisely the targets
+this tool looks for. They only count as a franchise signal when the same page
+also contains a franchise word or a known franchise brand. A family firm whose
+about page says "locally owned and operated since 1985" keeps its score; a
+footer reading "each location is an independently owned and operated franchise"
+is still flagged. Given the deduction is 15 points, a false positive on a good
+lead costs more than a missed franchise.
 After the change, 5 of the 6 are flagged. The exception is American Residential
 Services: it is bot-walled *and* its legal name contains no known brand, so it
 stays unflagged — a real limitation, not a solved case.
@@ -256,6 +266,7 @@ I kept the score rules-based on purpose: it's deterministic, auditable, free to 
 
 ## 8. Limitations and next steps
 
+- Franchise detection reads the company name and page title for known brands, and requires corroboration before trusting "locally/independently owned and operated". Two gaps remain: a franchise whose legal name carries no known brand and whose site is bot-walled is missed entirely (American Residential Services, in the run above), and an independent business that says "locally owned and operated" *and* names a franchise competitor on the same page will still be flagged. Next: treat franchise status as a reviewable flag rather than an automatic deduction.
 - Regex extraction misses signals phrased unusually. Next: an LLM extraction pass over the about page, used only to fill gaps, with results stored as evidence.
 - JavaScript-only websites return little HTML. Next: a Playwright fallback for pages with almost no text.
 - Revenue isn't estimated here, since SaaSquatch already does it; a direct integration would pull it in.

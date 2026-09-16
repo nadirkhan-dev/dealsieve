@@ -10,14 +10,20 @@ from bs4 import BeautifulSoup
 
 PAGE_ORDER = ["home", "about", "services", "contact", "careers"]
 
-# Franchise wording. The first four are explicit; the rest are weaker hints that
-# national franchise networks use on their location pages.
+# Wording specific enough to stand on its own as a franchise signal.
 FRANCHISE_PHRASES = (
     r"independently owned and operated franchise|franchise location|a franchise of|franchisee"
-    r"|locally owned and operated|independently owned and operated"
     r"|find a location near you|find your local"
     r"|franchise opportunities|own a franchise|become a franchisee"
 )
+
+# "locally/independently owned and operated" is used just as often by genuinely
+# independent businesses contrasting themselves with the chains -- and those are
+# exactly the acquisition targets this tool exists to find. A wrong -15 there
+# costs more than a missed franchise, so these phrases only count when the same
+# page corroborates them with a franchise word or a known franchise brand.
+FRANCHISE_WEAK_PHRASES = r"locally owned and operated|independently owned and operated"
+FRANCHISE_CORROBORATION = r"franchise|franchisee|franchisor"
 
 # Well-known national service-franchise brands, matched against the company name
 # and the home page <title>. These sites often never use the word "franchise" on
@@ -39,6 +45,21 @@ def match_franchise_brand(*haystacks) -> str | None:
     """Return the first known franchise brand found in any haystack, else None."""
     hay = " ".join(h.lower() for h in haystacks if h)
     return next((b for b in FRANCHISE_BRANDS if b in hay), None)
+
+
+def _corroborated_weak_franchise(texts):
+    """Find a weak "owned and operated" phrase that the same page backs up.
+
+    Corroboration must come from the page the phrase is on, so a franchise
+    disclaimer in a footer is not borrowed to convict an unrelated page.
+    """
+    for kind, _url, text, _html in texts:
+        m = re.search(FRANCHISE_WEAK_PHRASES, text, re.I)
+        if not m:
+            continue
+        if re.search(FRANCHISE_CORROBORATION, text, re.I) or match_franchise_brand(text):
+            return m, {"page": kind, "text": _snippet(text, m.start(), m.end())}
+    return None, None
 
 
 KEYWORDS = {
@@ -196,6 +217,12 @@ def extract_signals(crawl: dict, today: date | None = None, company_name: str | 
         signals[key] = bool(m) or bool(signals.get(key))  # keep an earlier brand match
         if ev and key not in evidence:  # brand evidence is stronger, so it wins
             evidence[key] = ev
+
+    if not signals.get("franchise"):
+        m, ev = _corroborated_weak_franchise(texts)
+        if m:
+            signals["franchise"] = True
+            evidence.setdefault("franchise", ev)
 
     recurring = []
     for kind, _url, text, _ in texts:
