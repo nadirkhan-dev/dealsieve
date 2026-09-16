@@ -8,7 +8,9 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./dealsieve.db")
+# Render can pass an unset blueprint variable as an empty string, so fall back
+# on any falsy value rather than only on a missing one.
+DATABASE_URL = os.getenv("DATABASE_URL") or "sqlite:///./dealsieve.db"
 
 # Heroku/Render style URLs use "postgres://", SQLAlchemy 2 needs a driver name.
 if DATABASE_URL.startswith("postgres://"):
