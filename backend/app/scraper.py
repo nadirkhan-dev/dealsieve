@@ -29,7 +29,7 @@ from .models import PageCache
 
 USER_AGENT = os.getenv(
     "CRAWLER_USER_AGENT",
-    "DealSieveBot/1.0 (+https://github.com/your-username/dealsieve; lead research)",
+    "DealSieveBot/1.0 (+https://github.com/nadirkhan-dev/dealsieve; nadirkhan.swe@gmail.com)",
 )
 MAX_HTML_BYTES = 1_500_000
 CACHE_TTL = timedelta(hours=int(os.getenv("CACHE_TTL_HOURS", "72")))
