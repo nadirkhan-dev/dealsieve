@@ -14,6 +14,7 @@ def setup_module():
 
 
 def teardown_module():
+    engine.dispose()  # release pooled connections before the file disappears
     Path("test_dealsieve.db").unlink(missing_ok=True)
 
 

@@ -17,6 +17,7 @@ services:
     environment:
       DATABASE_URL: postgresql://dealsieve:dealsieve@db:5432/dealsieve
       DEMO_MODE: ${DEMO_MODE:-true}
+      SEED_DEMO: ${SEED_DEMO:-true}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
     depends_on:
       db:

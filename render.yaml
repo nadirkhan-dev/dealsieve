@@ -10,5 +10,7 @@ services:
         sync: false   # paste your Supabase/Neon Postgres URL
       - key: DEMO_MODE
         value: "true"
+      - key: SEED_DEMO
+        value: "true"   # reviewers land on a scored dashboard, not an empty state
       - key: ANTHROPIC_API_KEY
         sync: false

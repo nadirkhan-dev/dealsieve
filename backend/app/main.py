@@ -1,6 +1,7 @@
 import asyncio
 import csv
 import io
+import logging
 import os
 import uuid
 from contextlib import asynccontextmanager
@@ -30,11 +31,55 @@ SAMPLE_CSV = ROOT / "data" / "sample_leads.csv"
 FRONTEND_DIST = ROOT / "frontend" / "dist"
 CONCURRENCY = int(os.getenv("CRAWL_CONCURRENCY", "8"))
 
+log = logging.getLogger("dealsieve")
+if not log.handlers:  # uvicorn only configures its own loggers, so attach ours
+    _handler = logging.StreamHandler()
+    _handler.setFormatter(logging.Formatter("%(levelname)s:     %(message)s"))
+    log.addHandler(_handler)
+    log.setLevel(logging.INFO)
+
+
+def seed_demo_enabled() -> bool:
+    return os.getenv("SEED_DEMO", "false").lower() in ("1", "true", "yes")
+
+
+async def seed_demo_data():
+    """Import and score the sample dataset once, on an empty database.
+
+    A reviewer opening a fresh deployment should land on a scored dashboard
+    rather than an empty state. Only runs in demo mode, so it never crawls real
+    sites, and any failure is logged and swallowed -- an empty dashboard is a
+    much better outcome than an API that won't boot.
+    """
+    try:
+        with SessionLocal() as db:
+            if db.scalar(select(func.count(Lead.id))):
+                return  # someone has already imported leads; leave them alone
+            report = import_rows(db, SAMPLE_CSV.read_bytes())
+            ids = list(db.scalars(select(Lead.id).where(Lead.status == "pending")).all())
+            if not ids:
+                return
+            job = Job(id=uuid.uuid4().hex[:12], total=len(ids), status="running")
+            db.add(job)
+            db.commit()
+            job_id = job.id
+        log.info("SEED_DEMO: imported %s sample leads, enriching", report["added"])
+        await run_enrichment(job_id, ids)
+        log.info("SEED_DEMO: enrichment finished")
+    except Exception as exc:  # noqa: BLE001 - startup must survive any seed failure
+        log.warning("SEED_DEMO failed (%s): %s", type(exc).__name__, exc)
+
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
     Base.metadata.create_all(bind=engine)
+    task = None
+    if seed_demo_enabled() and scraper.demo_mode():
+        # fire and forget: startup must not wait on a crawl
+        task = asyncio.create_task(seed_demo_data())
     yield
+    if task and not task.done():
+        task.cancel()
 
 
 app = FastAPI(title="DealSieve API", version="1.0.0", lifespan=lifespan)
