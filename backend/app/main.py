@@ -177,7 +177,7 @@ async def run_enrichment(job_id: str, lead_ids: list[int]):
                         crawl = await scraper.crawl_site(fetcher, lead.domain)
                     else:
                         crawl = {"reachable": False, "error": "No website on record", "pages": {}}
-                    signals = extract_signals(crawl)
+                    signals = extract_signals(crawl, company_name=lead.name)
                     if not lead.email and signals.get("emails"):
                         lead.email = pick_best_email(signals["emails"], lead.owner_name or signals.get("owner_name"), lead.domain)
                     if not lead.phone and signals.get("phones"):

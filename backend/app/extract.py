@@ -10,11 +10,42 @@ from bs4 import BeautifulSoup
 
 PAGE_ORDER = ["home", "about", "services", "contact", "careers"]
 
+# Franchise wording. The first four are explicit; the rest are weaker hints that
+# national franchise networks use on their location pages.
+FRANCHISE_PHRASES = (
+    r"independently owned and operated franchise|franchise location|a franchise of|franchisee"
+    r"|locally owned and operated|independently owned and operated"
+    r"|find a location near you|find your local"
+    r"|franchise opportunities|own a franchise|become a franchisee"
+)
+
+# Well-known national service-franchise brands, matched against the company name
+# and the home page <title>. These sites often never use the word "franchise" on
+# the pages we crawl -- a real run missed Roto-Rooter exactly that way.
+FRANCHISE_BRANDS = [
+    "roto-rooter", "roto rooter", "mr. rooter", "mr rooter", "benjamin franklin plumbing",
+    "one hour heating", "one hour air", "aire serv", "terminix", "servicemaster",
+    "servpro", "molly maid", "merry maids", "the maids", "mosquito joe", "trugreen",
+    "lawn doctor", "weed man", "chem-dry", "stanley steemer", "jan-pro", "jani-king",
+    "anago", "mr. electric", "mr electric", "mr. handyman", "mr handyman",
+    "glass doctor", "rainbow international", "ace handyman", "certapro",
+    "five star painting", "budget blinds", "bath fitter", "precision garage door",
+    "two men and a truck", "college hunks hauling junk", "1-800-got-junk", "junk king",
+    "the cleaning authority", "pillar to post", "dryer vent wizard", "kitchen tune-up",
+]
+
+
+def match_franchise_brand(*haystacks) -> str | None:
+    """Return the first known franchise brand found in any haystack, else None."""
+    hay = " ".join(h.lower() for h in haystacks if h)
+    return next((b for b in FRANCHISE_BRANDS if b in hay), None)
+
+
 KEYWORDS = {
     "succession": r"retir(?:e|ing|ement)|succession|next chapter|business (?:is )?for sale|looking for (?:a|the right) (?:buyer|successor)|pass(?:ing)? the torch",
     "family_owned": r"family[- ]owned|family business|family[- ]run|second[- ]generation|third[- ]generation|father and son|mother and daughter",
     "hiring": r"we'?re hiring|now hiring|join our team|open positions|career opportunities",
-    "franchise": r"independently owned and operated franchise|franchise location|a franchise of|franchisee",
+    "franchise": FRANCHISE_PHRASES,
     "pe_backed": r"portfolio company|backed by .{0,40}(?:capital|partners|equity)|acquired by|a subsidiary of|part of the .{0,30} family of companies",
     "testimonials": r"testimonials?|what our customers say|reviews?|5[- ]star",
 }
@@ -77,7 +108,7 @@ def _search(texts, pattern, flags=re.I):
     return None, None
 
 
-def extract_signals(crawl: dict, today: date | None = None) -> dict:
+def extract_signals(crawl: dict, today: date | None = None, company_name: str | None = None) -> dict:
     today = today or date.today()
     signals: dict = {
         "reachable": crawl.get("reachable", False),
@@ -86,6 +117,16 @@ def extract_signals(crawl: dict, today: date | None = None) -> dict:
         "pages_crawled": sorted(crawl.get("pages", {}).keys()),
         "evidence": {},
     }
+    # A known franchise brand in the company name needs no crawled page, so this
+    # runs before the unreachable check.
+    brand = match_franchise_brand(company_name)
+    if brand:
+        signals["franchise"] = True
+        signals["evidence"]["franchise"] = {
+            "page": "company name",
+            "text": f"\u201c{company_name}\u201d matches the national franchise brand \u201c{brand}\u201d.",
+        }
+
     if not signals["reachable"]:
         return signals
 
@@ -94,6 +135,16 @@ def extract_signals(crawl: dict, today: date | None = None) -> dict:
     all_html = "\n".join(t[3] for t in texts)
     home_html = texts[0][3]
     home_soup = BeautifulSoup(home_html, "html.parser")
+
+    if not signals.get("franchise"):
+        title = home_soup.title.get_text(" ", strip=True) if home_soup.title else None
+        brand = match_franchise_brand(title)
+        if brand:
+            signals["franchise"] = True
+            evidence["franchise"] = {
+                "page": "home",
+                "text": f"Page title \u201c{title[:120]}\u201d matches the national franchise brand \u201c{brand}\u201d.",
+            }
 
     # ---- founding year ---------------------------------------------------------
     years = []
@@ -142,8 +193,8 @@ def extract_signals(crawl: dict, today: date | None = None) -> dict:
     # ---- keyword signals -------------------------------------------------------
     for key, pattern in KEYWORDS.items():
         m, ev = _search(texts, pattern)
-        signals[key] = bool(m)
-        if ev:
+        signals[key] = bool(m) or bool(signals.get(key))  # keep an earlier brand match
+        if ev and key not in evidence:  # brand evidence is stronger, so it wins
             evidence[key] = ev
 
     recurring = []
