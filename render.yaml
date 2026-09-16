@@ -1,0 +1,14 @@
+# One-click deploy on Render (alternative to Cloud Run)
+services:
+  - type: web
+    name: dealsieve
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false   # paste your Supabase/Neon Postgres URL
+      - key: DEMO_MODE
+        value: "true"
+      - key: ANTHROPIC_API_KEY
+        sync: false
