@@ -358,3 +358,7 @@ input[type="range"], input[type="checkbox"] { accent-color: var(--brand-from); }
   .stat { flex-direction: column; align-items: flex-start; gap: 8px; padding: 12px; }
   .stat-sub { display: none; }
 }
+
+/* Static GitHub Pages preview banner */
+.static-banner { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: baseline; }
+.static-banner strong { font-weight: 650; }

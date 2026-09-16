@@ -78,7 +78,7 @@ flowchart LR
 | ORM | SQLAlchemy 2.0 | Same code on SQLite (dev) and Postgres (prod) |
 | Database | **PostgreSQL 16** in production (Neon or Supabase), SQLite locally | JSON columns for signals, zero-setup local dev |
 | AI | Anthropic Messages API (`claude-sonnet-4-6`), optional | Used only for writing, never for the score |
-| Tests / CI | pytest, GitHub Actions | 26 tests covering import, extraction, scoring, franchise detection, demo seeding, database URL resolution and the full API flow |
+| Tests / CI | pytest, GitHub Actions | 27 tests covering import, extraction, scoring, franchise detection, demo seeding, database URL resolution, the static snapshot and the full API flow |
 | Packaging | Multi-stage Dockerfile (Node build → Python slim) | One image serves API and static app |
 
 ### Data storage

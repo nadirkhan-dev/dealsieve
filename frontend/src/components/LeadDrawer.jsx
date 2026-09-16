@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { api } from "../api.js";
+import { api, IS_STATIC } from "../api.js";
+import { NEEDS_SERVER } from "../staticApi.js";
 import { COMPONENT_GROUPS, EMAIL_STATUS, GROUP_LABELS, PAGE_NAMES, STAGES, TIERS } from "../constants.js";
 
 const EVIDENCE_LABELS = {
@@ -90,8 +91,12 @@ export default function LeadDrawer({ id, onClose, onChanged, onRecrawl, aiEnable
               {pending ? "Run scoring to read this company's website." : `Based on ${lead.confidence}% of signals found on the website`}
             </p>
           </div>
-          {!pending && lead.domain && <button className="btn btn-quiet btn-sm" onClick={() => onRecrawl(lead.id)}>Re-check website</button>}
+          {!pending && lead.domain && !IS_STATIC && <button className="btn btn-quiet btn-sm" onClick={() => onRecrawl(lead.id)}>Re-check website</button>}
         </section>
+
+        {IS_STATIC && !pending && lead.domain && (
+          <p className="muted small">Re-checking this website {NEEDS_SERVER.charAt(0).toLowerCase() + NEEDS_SERVER.slice(1)}</p>
+        )}
 
         {lead.flags.length > 0 && (
           <ul className="flags">
@@ -165,14 +170,14 @@ export default function LeadDrawer({ id, onClose, onChanged, onRecrawl, aiEnable
             <h3>Outreach brief</h3>
             {!pending && (
               <button className="btn btn-primary btn-sm" onClick={writeBrief} disabled={briefBusy}>
-                {briefBusy ? "Writing…" : lead.brief ? "Rewrite brief" : "Write outreach brief"}
+                {briefBusy ? "Writing…" : lead.brief && !IS_STATIC ? "Rewrite brief" : "Write outreach brief"}
               </button>
             )}
           </div>
           {!lead.brief && !briefBusy && (
             <p className="muted small">
               A one-page summary, first-call questions and a first email to the owner, written only from what was found above.
-              {!aiEnabled && " Add ANTHROPIC_API_KEY on the server for AI-written briefs; a template is used until then."}
+              {!aiEnabled && !IS_STATIC && " Add ANTHROPIC_API_KEY on the server for AI-written briefs; a template is used until then."}
             </p>
           )}
           {briefError && <p className="field-error">{briefError}</p>}

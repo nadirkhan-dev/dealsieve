@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { api } from "../api.js";
+import { api, IS_STATIC } from "../api.js";
+import { NEEDS_SERVER } from "../staticApi.js";
 
 const WEIGHT_LABELS = {
   maturity: "Years in business",
@@ -83,9 +84,12 @@ export default function IcpSettings({ onClose, onSaved }) {
         </div>
 
         {error && <p className="field-error" role="alert">{error}</p>}
+        {IS_STATIC && <p className="muted small" role="status">Read-only here. Changing the buy box rescores every lead, which {NEEDS_SERVER.charAt(0).toLowerCase() + NEEDS_SERVER.slice(1)}</p>}
         <div className="modal-actions">
-          <button className="btn btn-quiet" onClick={onClose}>Cancel</button>
-          <button className="btn btn-primary" onClick={save} disabled={saving}>{saving ? "Rescoring…" : "Save and rescore"}</button>
+          <button className="btn btn-quiet" onClick={onClose}>{IS_STATIC ? "Close" : "Cancel"}</button>
+          {!IS_STATIC && (
+            <button className="btn btn-primary" onClick={save} disabled={saving}>{saving ? "Rescoring…" : "Save and rescore"}</button>
+          )}
         </div>
       </div>
     </div>

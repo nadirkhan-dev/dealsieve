@@ -1,4 +1,10 @@
+import { staticApi } from "./staticApi.js";
+
 const BASE = import.meta.env.VITE_API_URL || "";
+
+/* The GitHub Pages preview is built with VITE_STATIC=true and has no backend.
+ * Every other build keeps the live API untouched. */
+export const IS_STATIC = import.meta.env.VITE_STATIC === "true";
 
 async function request(path, options = {}) {
   const res = await fetch(`${BASE}${path}`, {
@@ -25,7 +31,8 @@ export function toQuery(filters) {
   return params.toString();
 }
 
-export const api = {
+const liveApi = {
+  isStatic: false,
   stats: () => request("/api/stats"),
   leads: (filters) => request(`/api/leads?${toQuery(filters)}`),
   lead: (id) => request(`/api/leads/${id}`),
@@ -43,4 +50,7 @@ export const api = {
   saveSettings: (body) => request("/api/settings", { method: "PUT", body: JSON.stringify(body) }),
   clear: () => request("/api/leads", { method: "DELETE" }),
   exportUrl: (filters) => `${BASE}/api/export.csv?${toQuery(filters)}`,
+  download: (filters) => { window.location.href = liveApi.exportUrl(filters); },
 };
+
+export const api = IS_STATIC ? staticApi : liveApi;

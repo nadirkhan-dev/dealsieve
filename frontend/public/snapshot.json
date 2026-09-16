@@ -1,0 +1,3437 @@
+{
+ "details": {
+  "1": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 37 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 42 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "HVAC is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: maintenance plan, service agreements"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Website mentions retirement or succession"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Room to modernize: site last updated around 2018, no online booking, not mobile friendly"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Have direct email, phone, owner name"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi Frank,\n\nI came across Reyes Comfort Heating & Air while researching hvac companies in Phoenix, AZ. Building something that lasts 37 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Reyes Comfort Heating & Air",
+    "questions": [
+     "What share of revenue comes from repeat customers or service agreements?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "No major risks found in public information"
+    ],
+    "source": "template",
+    "summary": "Reyes Comfort Heating & Air is a hvac company in Phoenix, AZ operating for about 37 years. Fit score 100/100.",
+    "why_it_fits": [
+     "In business about 37 years",
+     "About 42 employees, inside your 5\u2013150 range",
+     "HVAC is a target industry"
+    ]
+   },
+   "city": "Phoenix",
+   "confidence": 100,
+   "domain": "reyescomfort.test",
+   "email": "frank@reyescomfort.test",
+   "email_status": "valid",
+   "employees": 42,
+   "enriched_at": "2026-09-16T16:31:17.391323",
+   "error": null,
+   "flags": [],
+   "id": 1,
+   "industry": "HVAC",
+   "name": "Reyes Comfort Heating & Air",
+   "notes": null,
+   "owner_name": "Frank Reyes",
+   "phone": "(602) 555-0141",
+   "revenue_estimate": "$5M-$10M",
+   "score": 100,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2018,
+    "crawl_error": null,
+    "description": "Family-owned heating and air conditioning service for Phoenix homes and businesses since 1989.",
+    "digital_maturity": 15,
+    "emails": [
+     "frank@reyescomfort.test",
+     "office@reyescomfort.test"
+    ],
+    "employees_hint": 42,
+    "evidence": {
+     "family_owned": {
+      "page": "home",
+      "text": "\u2026Contact Phoenix heating and air conditioning you can count on Family-owned since 1989. Call (602) 555-0141 for same-day AC repair, furnace\u2026"
+     },
+     "founded_year": {
+      "page": "home",
+      "text": "\u2026Phoenix heating and air conditioning you can count on Family-owned since 1989. Call (602) 555-0141 for same-day AC repair, furnace service and new\u2026"
+     },
+     "owner_name": {
+      "page": "about",
+      "text": "Reyes Comfort Heating & Air Home About Services Contact Our story Frank Reyes, owner, started the company out of his garage in 1989. Today our team of 42\u2026"
+     },
+     "recurring_revenue": {
+      "page": "home",
+      "text": "\u2026repair, furnace service and new installs. Ask about our Comfort Club maintenance plan: two tune-ups a year and priority service. Read what our customers\u2026"
+     },
+     "succession": {
+      "page": "about",
+      "text": "\u2026the entire Valley. After 35 years, Frank is thinking about the next chapter and wants the team and customers taken care of for decades to come.\u2026"
+     },
+     "testimonials": {
+      "page": "home",
+      "text": "\u2026maintenance plan: two tune-ups a year and priority service. Read what our customers say: over 900 5-star reviews. \u00a9 2018 Reyes Comfort Heating & Air. All\u2026"
+     }
+    },
+    "family_owned": true,
+    "founded_year": 1989,
+    "franchise": false,
+    "hiring": false,
+    "industry_guess": "HVAC",
+    "owner_name": "Frank Reyes",
+    "pages_crawled": [
+     "about",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": false,
+    "phones": [
+     "(602) 555-0141"
+    ],
+    "reachable": true,
+    "recurring_terms": [
+     "maintenance plan",
+     "service agreements"
+    ],
+    "socials": {},
+    "succession": true,
+    "tech": {
+     "analytics": false,
+     "cms": "WordPress",
+     "https": true,
+     "live_chat": false,
+     "marketing_automation": false,
+     "mobile_friendly": false,
+     "online_booking": false
+    },
+    "testimonials": true,
+    "years_in_business": 37
+   },
+   "stage": "new",
+   "state": "AZ",
+   "status": "enriched",
+   "tags": {
+    "family_owned": true,
+    "hiring": false,
+    "recurring": true,
+    "succession": true
+   },
+   "tier": "A",
+   "years_in_business": 37
+  },
+  "10": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 54 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 7.5,
+     "ratio": 0.5,
+     "reason": "About 210 employees, just outside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Logistics is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No maintenance plans or contracts mentioned"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 7.5,
+     "ratio": 0.5,
+     "reason": "Founder-led for 54+ years"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 9.3,
+     "ratio": 0.93,
+     "reason": "Room to modernize: site last updated around 2023, no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 7.5,
+     "ratio": 0.75,
+     "reason": "Have general inbox, phone, owner name"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi Carl,\n\nI came across Delta Freight Lines while researching logistics companies in Memphis, TN. Building something that lasts 54 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Delta Freight Lines",
+    "questions": [
+     "Do customers come back on a schedule, or is most work one-off jobs?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "No major risks found in public information"
+    ],
+    "source": "template",
+    "summary": "Delta Freight Lines is a logistics company in Memphis, TN operating for about 54 years. Fit score 67/100.",
+    "why_it_fits": [
+     "In business about 54 years",
+     "Logistics is a target industry",
+     "Room to modernize: site last updated around 2023, no online booking"
+    ]
+   },
+   "city": "Memphis",
+   "confidence": 100,
+   "domain": "deltafreightlines.test",
+   "email": "dispatch@deltafreightlines.test",
+   "email_status": "role",
+   "employees": 210,
+   "enriched_at": "2026-09-16T16:31:17.684577",
+   "error": null,
+   "flags": [],
+   "id": 10,
+   "industry": "Logistics",
+   "name": "Delta Freight Lines",
+   "notes": null,
+   "owner_name": "Carl Jennings",
+   "phone": "(901) 555-0102",
+   "revenue_estimate": "$20M-$50M",
+   "score": 67,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2023,
+    "crawl_error": null,
+    "description": "Delta Freight Lines Home About Services Contact Regional trucking and logistics Moving freight across the Mid-South since 1972 with dedicated contract carriage and warehousing. \u00a9 2023 Delta Freight Lines. All rights rese",
+    "digital_maturity": 35,
+    "emails": [
+     "dispatch@deltafreightlines.test"
+    ],
+    "employees_hint": 210,
+    "evidence": {
+     "founded_year": {
+      "page": "home",
+      "text": "\u2026Regional trucking and logistics Moving freight across the Mid-South since 1972 with dedicated contract carriage and warehousing. \u00a9 2023 Delta\u2026"
+     },
+     "owner_name": {
+      "page": "about",
+      "text": "Delta Freight Lines Home About Services Contact President Carl Jennings leads more than 210 employees and 140 trucks. \u00a9 2023 Delta Freight\u2026"
+     }
+    },
+    "family_owned": false,
+    "founded_year": 1972,
+    "franchise": false,
+    "hiring": false,
+    "industry_guess": "Logistics",
+    "owner_name": "Carl Jennings",
+    "pages_crawled": [
+     "about",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": false,
+    "phones": [
+     "(901) 555-0102"
+    ],
+    "reachable": true,
+    "recurring_terms": [],
+    "socials": {},
+    "succession": false,
+    "tech": {
+     "analytics": false,
+     "cms": null,
+     "https": true,
+     "live_chat": false,
+     "marketing_automation": false,
+     "mobile_friendly": true,
+     "online_booking": false
+    },
+    "testimonials": false,
+    "years_in_business": 54
+   },
+   "stage": "new",
+   "state": "TN",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "B",
+   "years_in_business": 54
+  },
+  "11": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": false,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 6.0,
+     "ratio": 0.3,
+     "reason": "Founding year not found on the website"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 35 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Roofing is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": false,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "succession",
+     "known": false,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "upside",
+     "known": false,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No contact details found"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi there,\n\nI came across Northwind Roofing while researching roofing companies in Minneapolis, MN. Building something that lasts as long as you have is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Northwind Roofing",
+    "questions": [
+     "Do customers come back on a schedule, or is most work one-off jobs?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "Website shows a bot check. Review it manually."
+    ],
+    "source": "template",
+    "summary": "Northwind Roofing is a roofing company in Minneapolis, MN. Fit score 42/100.",
+    "why_it_fits": [
+     "About 35 employees, inside your 5\u2013150 range",
+     "Roofing is a target industry",
+     "Founding year not found on the website"
+    ]
+   },
+   "city": "Minneapolis",
+   "confidence": 43,
+   "domain": "northwindroofing.test",
+   "email": null,
+   "email_status": null,
+   "employees": 35,
+   "enriched_at": "2026-09-16T16:31:17.616190",
+   "error": "Site shows a bot check (CAPTCHA). Review it manually.",
+   "flags": [
+    {
+     "level": "watch",
+     "text": "Website shows a bot check. Review it manually."
+    }
+   ],
+   "id": 11,
+   "industry": "Roofing",
+   "name": "Northwind Roofing",
+   "notes": null,
+   "owner_name": null,
+   "phone": null,
+   "revenue_estimate": "$3M-$5M",
+   "score": 42,
+   "signals": {
+    "blocked": true,
+    "crawl_error": "Site shows a bot check (CAPTCHA). Review it manually.",
+    "evidence": {},
+    "pages_crawled": [],
+    "reachable": false
+   },
+   "stage": "new",
+   "state": "MN",
+   "status": "failed",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": null
+  },
+  "12": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": false,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 6.0,
+     "ratio": 0.3,
+     "reason": "Founding year not found on the website"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 8 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 2.2,
+     "ratio": 0.15,
+     "reason": "Auto Repair is not in your target list"
+    },
+    {
+     "key": "recurring",
+     "known": false,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "succession",
+     "known": false,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "upside",
+     "known": false,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Have direct email, phone, owner name"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi Luis,\n\nI came across Valley Auto Repair while researching auto repair companies in Fresno, CA. Building something that lasts as long as you have is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Valley Auto Repair",
+    "questions": [
+     "Do customers come back on a schedule, or is most work one-off jobs?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "No website on record"
+    ],
+    "source": "template",
+    "summary": "Valley Auto Repair is a auto repair company in Fresno, CA. Fit score 39/100.",
+    "why_it_fits": [
+     "About 8 employees, inside your 5\u2013150 range",
+     "Have direct email, phone, owner name",
+     "Founding year not found on the website"
+    ]
+   },
+   "city": "Fresno",
+   "confidence": 43,
+   "domain": null,
+   "email": "valleyautofresno@gmail.com",
+   "email_status": "personal_domain",
+   "employees": 8,
+   "enriched_at": "2026-09-16T16:31:17.710090",
+   "error": "No website on record",
+   "flags": [
+    {
+     "level": "watch",
+     "text": "No website on record"
+    }
+   ],
+   "id": 12,
+   "industry": "Auto Repair",
+   "name": "Valley Auto Repair",
+   "notes": null,
+   "owner_name": "Luis Moreno",
+   "phone": "(559) 555-0187",
+   "revenue_estimate": "$500K-$1M",
+   "score": 39,
+   "signals": {
+    "blocked": false,
+    "crawl_error": "No website on record",
+    "evidence": {},
+    "pages_crawled": [],
+    "reachable": false
+   },
+   "stage": "new",
+   "state": "CA",
+   "status": "failed",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": null
+  },
+  "13": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": false,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 6.0,
+     "ratio": 0.3,
+     "reason": "Founding year not found on the website"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 12 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Electrical is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": false,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "succession",
+     "known": false,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "upside",
+     "known": false,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No contact details found"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi there,\n\nI came across Old Town Electric while researching electrical companies in Richmond, VA. Building something that lasts as long as you have is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Old Town Electric",
+    "questions": [
+     "Do customers come back on a schedule, or is most work one-off jobs?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "Website unreachable (Could not resolve host)"
+    ],
+    "source": "template",
+    "summary": "Old Town Electric is a electrical company in Richmond, VA. Fit score 42/100.",
+    "why_it_fits": [
+     "About 12 employees, inside your 5\u2013150 range",
+     "Electrical is a target industry",
+     "Founding year not found on the website"
+    ]
+   },
+   "city": "Richmond",
+   "confidence": 43,
+   "domain": "oldtownelectric.test",
+   "email": null,
+   "email_status": null,
+   "employees": 12,
+   "enriched_at": "2026-09-16T16:31:17.638247",
+   "error": "Could not resolve host",
+   "flags": [
+    {
+     "level": "watch",
+     "text": "Website unreachable (Could not resolve host)"
+    }
+   ],
+   "id": 13,
+   "industry": "Electrical",
+   "name": "Old Town Electric",
+   "notes": null,
+   "owner_name": null,
+   "phone": null,
+   "revenue_estimate": "$1M-$3M",
+   "score": 42,
+   "signals": {
+    "blocked": false,
+    "crawl_error": "Could not resolve host",
+    "evidence": {},
+    "pages_crawled": [],
+    "reachable": false
+   },
+   "stage": "new",
+   "state": "VA",
+   "status": "failed",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": null
+  },
+  "2": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 30 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 25 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Plumbing is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: membership, annual inspections"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 7.5,
+     "ratio": 0.5,
+     "reason": "Founder-led for 30+ years"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 9.3,
+     "ratio": 0.93,
+     "reason": "Room to modernize: site last updated around 2021, no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 7.5,
+     "ratio": 0.75,
+     "reason": "Have general inbox, phone, owner name"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi Dale,\n\nI came across Summit Ridge Plumbing while researching plumbing companies in Denver, CO. Building something that lasts 30 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Summit Ridge Plumbing",
+    "questions": [
+     "What share of revenue comes from repeat customers or service agreements?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "No major risks found in public information"
+    ],
+    "source": "template",
+    "summary": "Summit Ridge Plumbing is a plumbing company in Denver, CO operating for about 30 years. Fit score 89/100.",
+    "why_it_fits": [
+     "In business about 30 years",
+     "About 25 employees, inside your 5\u2013150 range",
+     "Plumbing is a target industry"
+    ]
+   },
+   "city": "Denver",
+   "confidence": 100,
+   "domain": "summitridgeplumbing.test",
+   "email": "service@summitridgeplumbing.test",
+   "email_status": "role",
+   "employees": 25,
+   "enriched_at": "2026-09-16T16:31:17.429590",
+   "error": null,
+   "flags": [
+    {
+     "level": "good",
+     "text": "Currently hiring, a sign of demand"
+    }
+   ],
+   "id": 2,
+   "industry": "Plumbing",
+   "name": "Summit Ridge Plumbing",
+   "notes": null,
+   "owner_name": "Dale Hughes",
+   "phone": "(303) 555-0199",
+   "revenue_estimate": "$3M-$5M",
+   "score": 89,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2021,
+    "crawl_error": null,
+    "description": "Denver plumbing, drain cleaning and water heater experts.",
+    "digital_maturity": 35,
+    "emails": [
+     "service@summitridgeplumbing.test"
+    ],
+    "evidence": {
+     "founded_year": {
+      "page": "home",
+      "text": "\u2026Plumbing Home About Services Contact Careers Denver's plumbing team since 1996 Drain cleaning, water heater installs and repiping. Join the Summit\u2026"
+     },
+     "hiring": {
+      "page": "careers",
+      "text": "Summit Ridge Plumbing Home About Services Contact Careers Now hiring Join our team of plumbers. Open positions for apprentices. \u00a9 2021\u2026"
+     },
+     "owner_name": {
+      "page": "about",
+      "text": "Summit Ridge Plumbing Home About Services Contact Careers Dale Hughes, founder, grew Summit Ridge from one truck to a crew of 28 licensed plumbers.\u2026"
+     },
+     "recurring_revenue": {
+      "page": "home",
+      "text": "\u2026cleaning, water heater installs and repiping. Join the Summit Ridge membership for annual inspections and 15% off repairs. \u00a9 2021 Summit Ridge\u2026"
+     }
+    },
+    "family_owned": false,
+    "founded_year": 1996,
+    "franchise": false,
+    "hiring": true,
+    "industry_guess": "Plumbing",
+    "owner_name": "Dale Hughes",
+    "pages_crawled": [
+     "about",
+     "careers",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": false,
+    "phones": [
+     "(303) 555-0199"
+    ],
+    "reachable": true,
+    "recurring_terms": [
+     "membership",
+     "annual inspections"
+    ],
+    "socials": {},
+    "succession": false,
+    "tech": {
+     "analytics": false,
+     "cms": null,
+     "https": true,
+     "live_chat": false,
+     "marketing_automation": false,
+     "mobile_friendly": true,
+     "online_booking": false
+    },
+    "testimonials": false,
+    "years_in_business": 30
+   },
+   "stage": "new",
+   "state": "CO",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": true,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "A",
+   "years_in_business": 30
+  },
+  "3": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 15.0,
+     "ratio": 0.75,
+     "reason": "In business about 15 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 75 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "IT Services is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: managed services, monthly plan"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No transition signals found"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 1.0,
+     "ratio": 0.1,
+     "reason": "Already digitally mature"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 7.5,
+     "ratio": 0.75,
+     "reason": "Have general inbox, phone, owner name"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi Priya,\n\nI came across Brightline Managed IT while researching it services companies in Austin, TX. Building something that lasts 15 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Brightline Managed IT",
+    "questions": [
+     "What share of revenue comes from repeat customers or service agreements?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "No major risks found in public information"
+    ],
+    "source": "template",
+    "summary": "Brightline Managed IT is a it services company in Austin, TX operating for about 15 years. Fit score 68/100.",
+    "why_it_fits": [
+     "In business about 15 years",
+     "About 75 employees, inside your 5\u2013150 range",
+     "IT Services is a target industry"
+    ]
+   },
+   "city": "Austin",
+   "confidence": 100,
+   "domain": "brightlineit.test",
+   "email": "hello@brightlineit.test",
+   "email_status": "role",
+   "employees": 75,
+   "enriched_at": "2026-09-16T16:31:17.466830",
+   "error": null,
+   "flags": [],
+   "id": 3,
+   "industry": "IT Services",
+   "name": "Brightline Managed IT",
+   "notes": null,
+   "owner_name": "Priya Raman",
+   "phone": "(512) 555-0110",
+   "revenue_estimate": "$10M-$20M",
+   "score": 68,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2026,
+    "crawl_error": null,
+    "description": "Managed IT and cybersecurity for Austin small businesses.",
+    "digital_maturity": 100,
+    "emails": [
+     "hello@brightlineit.test"
+    ],
+    "evidence": {
+     "founded_year": {
+      "page": "home",
+      "text": "\u2026Managed IT Home About Services Contact Managed IT that just works Founded in 2011. Flat-rate managed services and 24/7 cybersecurity monitoring on\u2026"
+     },
+     "owner_name": {
+      "page": "about",
+      "text": "Brightline Managed IT Home About Services Contact Priya Raman, CEO, leads a team of 60 engineers across Texas. \u00a9 2026 Brightline\u2026"
+     },
+     "recurring_revenue": {
+      "page": "home",
+      "text": "\u2026Contact Managed IT that just works Founded in 2011. Flat-rate managed services and 24/7 cybersecurity monitoring on simple monthly plans. Book\u2026"
+     }
+    },
+    "family_owned": false,
+    "founded_year": 2011,
+    "franchise": false,
+    "hiring": false,
+    "industry_guess": "IT services",
+    "owner_name": "Priya Raman",
+    "pages_crawled": [
+     "about",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": false,
+    "phones": [
+     "(512) 555-0110"
+    ],
+    "reachable": true,
+    "recurring_terms": [
+     "managed services",
+     "monthly plan"
+    ],
+    "socials": {},
+    "succession": false,
+    "tech": {
+     "analytics": true,
+     "cms": null,
+     "https": true,
+     "live_chat": true,
+     "marketing_automation": true,
+     "mobile_friendly": true,
+     "online_booking": true
+    },
+    "testimonials": false,
+    "years_in_business": 15
+   },
+   "stage": "new",
+   "state": "TX",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "B",
+   "years_in_business": 15
+  },
+  "4": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 30 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 30 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Landscaping is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: annual service, maintenance agreements"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 10.5,
+     "ratio": 0.7,
+     "reason": "Long-running family business, likely thinking about the next generation"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Room to modernize: site last updated around 2016, no online booking, not mobile friendly"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Have direct email, phone, owner name"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi Tom,\n\nI came across Oakhaven Landscaping while researching landscaping companies in Charlotte, NC. Building something that lasts 30 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Oakhaven Landscaping",
+    "questions": [
+     "What share of revenue comes from repeat customers or service agreements?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "No major risks found in public information"
+    ],
+    "source": "template",
+    "summary": "Oakhaven Landscaping is a landscaping company in Charlotte, NC operating for about 30 years. Fit score 96/100.",
+    "why_it_fits": [
+     "In business about 30 years",
+     "About 30 employees, inside your 5\u2013150 range",
+     "Landscaping is a target industry"
+    ]
+   },
+   "city": "Charlotte",
+   "confidence": 100,
+   "domain": "oakhavenlandscaping.test",
+   "email": "tom@oakhavenlandscaping.test",
+   "email_status": "valid",
+   "employees": 30,
+   "enriched_at": "2026-09-16T16:31:17.497790",
+   "error": null,
+   "flags": [],
+   "id": 4,
+   "industry": "Landscaping",
+   "name": "Oakhaven Landscaping",
+   "notes": null,
+   "owner_name": "Tom Whitfield",
+   "phone": "(704) 555-0122",
+   "revenue_estimate": "$1M-$3M",
+   "score": 96,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2016,
+    "crawl_error": null,
+    "description": "Commercial and residential landscaping in Charlotte.",
+    "digital_maturity": 15,
+    "emails": [
+     "tom@oakhavenlandscaping.test"
+    ],
+    "evidence": {
+     "family_owned": {
+      "page": "home",
+      "text": "\u2026Home About Services Contact Beautiful grounds, every season A second-generation, family-owned landscaping company serving Charlotte for over 30\u2026"
+     },
+     "founded_year": {
+      "page": "home",
+      "text": "\u2026family-owned landscaping company serving Charlotte for over 30 years. Annual service contracts for HOAs and office parks, plus seasonal\u2026"
+     },
+     "owner_name": {
+      "page": "about",
+      "text": "Oakhaven Landscaping Home About Services Contact Owner Tom Whitfield took over from his father and runs a crew of 18. \u00a9 2016 Oakhaven\u2026"
+     },
+     "recurring_revenue": {
+      "page": "home",
+      "text": "\u2026landscaping company serving Charlotte for over 30 years. Annual service contracts for HOAs and office parks, plus seasonal lawn care. \u00a9 2016\u2026"
+     }
+    },
+    "family_owned": true,
+    "founded_year": 1996,
+    "franchise": false,
+    "hiring": false,
+    "industry_guess": "Landscaping",
+    "owner_name": "Tom Whitfield",
+    "pages_crawled": [
+     "about",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": false,
+    "phones": [
+     "(704) 555-0122"
+    ],
+    "reachable": true,
+    "recurring_terms": [
+     "annual service",
+     "maintenance agreements"
+    ],
+    "socials": {},
+    "succession": false,
+    "tech": {
+     "analytics": false,
+     "cms": null,
+     "https": true,
+     "live_chat": false,
+     "marketing_automation": false,
+     "mobile_friendly": false,
+     "online_booking": false
+    },
+    "testimonials": false,
+    "years_in_business": 30
+   },
+   "stage": "new",
+   "state": "NC",
+   "status": "enriched",
+   "tags": {
+    "family_owned": true,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "A",
+   "years_in_business": 30
+  },
+  "5": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 48 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 85 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Manufacturing is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No maintenance plans or contracts mentioned"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 7.5,
+     "ratio": 0.5,
+     "reason": "Founder-led for 48+ years"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 9.3,
+     "ratio": 0.93,
+     "reason": "Room to modernize: site last updated around 2019, no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 7.5,
+     "ratio": 0.75,
+     "reason": "Have general inbox, phone, owner name"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi Gary,\n\nI came across Precision Edge Machining while researching manufacturing companies in Cleveland, OH. Building something that lasts 48 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Precision Edge Machining",
+    "questions": [
+     "Do customers come back on a schedule, or is most work one-off jobs?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "No major risks found in public information"
+    ],
+    "source": "template",
+    "summary": "Precision Edge Machining is a manufacturing company in Cleveland, OH operating for about 48 years. Fit score 74/100.",
+    "why_it_fits": [
+     "In business about 48 years",
+     "About 85 employees, inside your 5\u2013150 range",
+     "Manufacturing is a target industry"
+    ]
+   },
+   "city": "Cleveland",
+   "confidence": 100,
+   "domain": "precisionedgemfg.test",
+   "email": "sales@precisionedgemfg.test",
+   "email_status": "role",
+   "employees": 85,
+   "enriched_at": "2026-09-16T16:31:17.519482",
+   "error": null,
+   "flags": [],
+   "id": 5,
+   "industry": "Manufacturing",
+   "name": "Precision Edge Machining",
+   "notes": null,
+   "owner_name": "Gary Novak",
+   "phone": "(216) 555-0133",
+   "revenue_estimate": "$10M-$20M",
+   "score": 74,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2019,
+    "crawl_error": null,
+    "description": "CNC machining and metal fabrication in Cleveland, Ohio.",
+    "digital_maturity": 35,
+    "emails": [
+     "sales@precisionedgemfg.test"
+    ],
+    "employees_hint": 85,
+    "evidence": {
+     "founded_year": {
+      "page": "home",
+      "text": "Precision Edge Machining Home About Services Contact Tight tolerances since 1978 Established in 1978, Precision Edge provides CNC machining and\u2026"
+     },
+     "owner_name": {
+      "page": "about",
+      "text": "Precision Edge Machining Home About Services Contact Gary Novak, President, joined his uncle's shop in 1985. Our staff of 85 people runs two\u2026"
+     }
+    },
+    "family_owned": false,
+    "founded_year": 1978,
+    "franchise": false,
+    "hiring": false,
+    "industry_guess": "Manufacturing",
+    "owner_name": "Gary Novak",
+    "pages_crawled": [
+     "about",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": false,
+    "phones": [
+     "(216) 555-0133"
+    ],
+    "reachable": true,
+    "recurring_terms": [],
+    "socials": {},
+    "succession": false,
+    "tech": {
+     "analytics": false,
+     "cms": null,
+     "https": true,
+     "live_chat": false,
+     "marketing_automation": false,
+     "mobile_friendly": true,
+     "online_booking": false
+    },
+    "testimonials": false,
+    "years_in_business": 48
+   },
+   "stage": "new",
+   "state": "OH",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "A",
+   "years_in_business": 48
+  },
+  "6": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 21 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 22 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Pest Control is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 9.0,
+     "ratio": 0.6,
+     "reason": "Mentions monthly service"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No transition signals found"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 2.9,
+     "ratio": 0.29,
+     "reason": "Already digitally mature"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 5.5,
+     "ratio": 0.55,
+     "reason": "Have general inbox, phone"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi there,\n\nI came across Harbor Point Pest Control while researching pest control companies in Tampa, FL. Building something that lasts 21 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Harbor Point Pest Control",
+    "questions": [
+     "What share of revenue comes from repeat customers or service agreements?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "Franchise location, usually needs franchisor approval to sell"
+    ],
+    "source": "template",
+    "summary": "Harbor Point Pest Control is a pest control company in Tampa, FL operating for about 21 years. Fit score 52/100.",
+    "why_it_fits": [
+     "In business about 21 years",
+     "About 22 employees, inside your 5\u2013150 range",
+     "Pest Control is a target industry"
+    ]
+   },
+   "city": "Tampa",
+   "confidence": 100,
+   "domain": "harborpointpest.test",
+   "email": "info@harborpointpest.test",
+   "email_status": "role",
+   "employees": 22,
+   "enriched_at": "2026-09-16T16:31:17.539608",
+   "error": null,
+   "flags": [
+    {
+     "level": "risk",
+     "text": "Franchise location, usually needs franchisor approval to sell"
+    }
+   ],
+   "id": 6,
+   "industry": "Pest Control",
+   "name": "Harbor Point Pest Control",
+   "notes": null,
+   "owner_name": null,
+   "phone": "(813) 555-0190",
+   "revenue_estimate": "$1M-$3M",
+   "score": 52,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2025,
+    "crawl_error": null,
+    "description": "Harbor Point Pest Control Home About Services Contact Tampa pest control Serving Tampa Bay since 2005 with quarterly pest control plans and termite protection. Book online today. Each location is an independently owned a",
+    "digital_maturity": 80,
+    "emails": [
+     "info@harborpointpest.test"
+    ],
+    "evidence": {
+     "founded_year": {
+      "page": "home",
+      "text": "\u2026Home About Services Contact Tampa pest control Serving Tampa Bay since 2005 with quarterly pest control plans and termite protection. Book\u2026"
+     },
+     "franchise": {
+      "page": "home",
+      "text": "\u2026plans and termite protection. Book online today. Each location is an independently owned and operated franchise. \u00a9 2025 Harbor Point Pest Control. All rights reserved."
+     },
+     "recurring_revenue": {
+      "page": "services",
+      "text": "\u2026Home About Services Contact Termite inspections, mosquito treatment, monthly service for restaurants. \u00a9 2025 Harbor Point Pest Control. All rights\u2026"
+     }
+    },
+    "family_owned": false,
+    "founded_year": 2005,
+    "franchise": true,
+    "hiring": false,
+    "industry_guess": "Pest control",
+    "pages_crawled": [
+     "about",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": false,
+    "phones": [
+     "(813) 555-0190"
+    ],
+    "reachable": true,
+    "recurring_terms": [
+     "monthly service"
+    ],
+    "socials": {},
+    "succession": false,
+    "tech": {
+     "analytics": true,
+     "cms": null,
+     "https": true,
+     "live_chat": false,
+     "marketing_automation": false,
+     "mobile_friendly": true,
+     "online_booking": true
+    },
+    "testimonials": false,
+    "years_in_business": 21
+   },
+   "stage": "new",
+   "state": "FL",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": 21
+  },
+  "7": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 24 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 120 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Commercial Cleaning is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 9.0,
+     "ratio": 0.6,
+     "reason": "Mentions service agreements"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No transition signals found"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 6.4,
+     "ratio": 0.64,
+     "reason": "Room to modernize: no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 5.5,
+     "ratio": 0.55,
+     "reason": "Have general inbox, phone"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi there,\n\nI came across Keystone Commercial Cleaning while researching commercial cleaning companies in Pittsburgh, PA. Building something that lasts 24 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Keystone Commercial Cleaning",
+    "questions": [
+     "What share of revenue comes from repeat customers or service agreements?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "Appears to already be owned by an investor or parent company"
+    ],
+    "source": "template",
+    "summary": "Keystone Commercial Cleaning is a commercial cleaning company in Pittsburgh, PA operating for about 24 years. Fit score 46/100.",
+    "why_it_fits": [
+     "In business about 24 years",
+     "About 120 employees, inside your 5\u2013150 range",
+     "Commercial Cleaning is a target industry"
+    ]
+   },
+   "city": "Pittsburgh",
+   "confidence": 100,
+   "domain": "keystoneclean.test",
+   "email": "info@keystoneclean.test",
+   "email_status": "role",
+   "employees": 120,
+   "enriched_at": "2026-09-16T16:31:17.563318",
+   "error": null,
+   "flags": [
+    {
+     "level": "risk",
+     "text": "Appears to already be owned by an investor or parent company"
+    }
+   ],
+   "id": 7,
+   "industry": "Commercial Cleaning",
+   "name": "Keystone Commercial Cleaning",
+   "notes": null,
+   "owner_name": null,
+   "phone": "(412) 555-0155",
+   "revenue_estimate": "$5M-$10M",
+   "score": 46,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2025,
+    "crawl_error": null,
+    "description": "Keystone Commercial Cleaning Home About Services Contact Janitorial services for Pittsburgh offices Founded in 2002. Commercial cleaning under flexible service agreements. \u00a9 2025 Keystone Commercial Cleaning. All rights",
+    "digital_maturity": 55,
+    "emails": [
+     "info@keystoneclean.test"
+    ],
+    "employees_hint": 120,
+    "evidence": {
+     "founded_year": {
+      "page": "home",
+      "text": "\u2026About Services Contact Janitorial services for Pittsburgh offices Founded in 2002. Commercial cleaning under flexible service agreements. \u00a9 2025\u2026"
+     },
+     "pe_backed": {
+      "page": "about",
+      "text": "\u2026Commercial Cleaning Home About Services Contact Keystone is a portfolio company of Allegheny Growth Capital. Our staff of 120 people cleans over 300\u2026"
+     },
+     "recurring_revenue": {
+      "page": "home",
+      "text": "\u2026offices Founded in 2002. Commercial cleaning under flexible service agreements. \u00a9 2025 Keystone Commercial Cleaning. All rights reserved."
+     }
+    },
+    "family_owned": false,
+    "founded_year": 2002,
+    "franchise": false,
+    "hiring": false,
+    "industry_guess": "Commercial cleaning",
+    "pages_crawled": [
+     "about",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": true,
+    "phones": [
+     "(412) 555-0155"
+    ],
+    "reachable": true,
+    "recurring_terms": [
+     "service agreements"
+    ],
+    "socials": {},
+    "succession": false,
+    "tech": {
+     "analytics": false,
+     "cms": null,
+     "https": true,
+     "live_chat": false,
+     "marketing_automation": false,
+     "mobile_friendly": true,
+     "online_booking": false
+    },
+    "testimonials": false,
+    "years_in_business": 24
+   },
+   "stage": "new",
+   "state": "PA",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": 24
+  },
+  "8": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 8.0,
+     "ratio": 0.4,
+     "reason": "Only about 6 years old"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 9 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 2.2,
+     "ratio": 0.15,
+     "reason": "Marketing Agency is not in your target list"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 9.0,
+     "ratio": 0.6,
+     "reason": "Mentions retainer"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No transition signals found"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 1.4,
+     "ratio": 0.14,
+     "reason": "Already digitally mature"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 4.5,
+     "ratio": 0.45,
+     "reason": "Have general inbox, owner name"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi Jess,\n\nI came across Lumen Digital Studio while researching marketing agency companies in Brooklyn, NY. Building something that lasts 6 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Lumen Digital Studio",
+    "questions": [
+     "What share of revenue comes from repeat customers or service agreements?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "No major risks found in public information"
+    ],
+    "source": "template",
+    "summary": "Lumen Digital Studio is a marketing agency company in Brooklyn, NY operating for about 6 years. Fit score 40/100.",
+    "why_it_fits": [
+     "About 9 employees, inside your 5\u2013150 range",
+     "Mentions retainer",
+     "Only about 6 years old"
+    ]
+   },
+   "city": "Brooklyn",
+   "confidence": 100,
+   "domain": "lumendigital.test",
+   "email": "hello@lumendigital.test",
+   "email_status": "role",
+   "employees": 9,
+   "enriched_at": "2026-09-16T16:31:17.660767",
+   "error": null,
+   "flags": [],
+   "id": 8,
+   "industry": "Marketing Agency",
+   "name": "Lumen Digital Studio",
+   "notes": null,
+   "owner_name": "Jess Park",
+   "phone": null,
+   "revenue_estimate": "$1M-$3M",
+   "score": 40,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2026,
+    "crawl_error": null,
+    "description": "Lumen Digital Studio Home About Services Contact Brands that move people A Brooklyn digital marketing agency founded in 2020. SEO services, paid social and web design on a monthly retainer. Book online \u00a9 2026 Lumen Digit",
+    "digital_maturity": 90,
+    "emails": [
+     "hello@lumendigital.test"
+    ],
+    "evidence": {
+     "founded_year": {
+      "page": "home",
+      "text": "\u2026Contact Brands that move people A Brooklyn digital marketing agency founded in 2020. SEO services, paid social and web design on a monthly retainer.\u2026"
+     },
+     "owner_name": {
+      "page": "about",
+      "text": "Lumen Digital Studio Home About Services Contact Co-founder Jess Park and a team of 9 designers and strategists. \u00a9 2026 Lumen Digital\u2026"
+     },
+     "recurring_revenue": {
+      "page": "home",
+      "text": "\u2026in 2020. SEO services, paid social and web design on a monthly retainer. Book online \u00a9 2026 Lumen Digital Studio. All rights reserved."
+     }
+    },
+    "family_owned": false,
+    "founded_year": 2020,
+    "franchise": false,
+    "hiring": false,
+    "industry_guess": "Marketing agency",
+    "owner_name": "Jess Park",
+    "pages_crawled": [
+     "about",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": false,
+    "phones": [],
+    "reachable": true,
+    "recurring_terms": [
+     "retainer"
+    ],
+    "socials": {},
+    "succession": false,
+    "tech": {
+     "analytics": true,
+     "cms": null,
+     "https": true,
+     "live_chat": true,
+     "marketing_automation": false,
+     "mobile_friendly": true,
+     "online_booking": true
+    },
+    "testimonials": false,
+    "years_in_business": 6
+   },
+   "stage": "new",
+   "state": "NY",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": 6
+  },
+  "9": {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 41 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 14 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Accounting is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: monthly service, annual inspections"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Website mentions retirement or succession"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 9.3,
+     "ratio": 0.93,
+     "reason": "Room to modernize: site last updated around 2020, no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Have direct email, phone, owner name"
+    }
+   ],
+   "brief": {
+    "email_body": "Hi Margaret,\n\nI came across Cedar & Stone Accounting while researching accounting companies in Madison, WI. Building something that lasts 41 years is rare, and it's clear customers trust your team.\n\nI'm an operator looking to acquire and grow one great business for the long term, keeping the name, the team and the way you treat customers. If you've ever thought about what the next chapter looks like, I'd value a 15-minute conversation. No pressure and no brokers involved.\n\nWould a short call next week work?\n\nBest,\n[Your name]",
+    "email_subject": "Question about the future of Cedar & Stone Accounting",
+    "questions": [
+     "What share of revenue comes from repeat customers or service agreements?",
+     "How involved is the owner in day-to-day sales and scheduling?",
+     "Is there a family member or key employee expected to take over?"
+    ],
+    "risks": [
+     "No major risks found in public information"
+    ],
+    "source": "template",
+    "summary": "Cedar & Stone Accounting is a accounting company in Madison, WI operating for about 41 years. Fit score 99/100.",
+    "why_it_fits": [
+     "In business about 41 years",
+     "About 14 employees, inside your 5\u2013150 range",
+     "Accounting is a target industry"
+    ]
+   },
+   "city": "Madison",
+   "confidence": 100,
+   "domain": "cedarstonecpa.test",
+   "email": "margaret@cedarstonecpa.test",
+   "email_status": "valid",
+   "employees": 14,
+   "enriched_at": "2026-09-16T16:31:17.594379",
+   "error": null,
+   "flags": [],
+   "id": 9,
+   "industry": "Accounting",
+   "name": "Cedar & Stone Accounting",
+   "notes": null,
+   "owner_name": "Margaret Olsen",
+   "phone": "(608) 555-0170",
+   "revenue_estimate": "$1M-$3M",
+   "score": 99,
+   "signals": {
+    "blocked": false,
+    "copyright_year": 2020,
+    "crawl_error": null,
+    "description": "Tax preparation, bookkeeping and advisory for Madison families and small businesses.",
+    "digital_maturity": 35,
+    "emails": [
+     "margaret@cedarstonecpa.test"
+    ],
+    "evidence": {
+     "founded_year": {
+      "page": "home",
+      "text": "\u2026Home About Services Contact Trusted accounting for Madison since 1985 Tax preparation and bookkeeping for over 600 local businesses and\u2026"
+     },
+     "owner_name": {
+      "page": "about",
+      "text": "Cedar & Stone Accounting Home About Services Contact Margaret Olsen, founder, opened the firm in 1985. As she plans her retirement, she is\u2026"
+     },
+     "recurring_revenue": {
+      "page": "home",
+      "text": "\u2026and bookkeeping for over 600 local businesses and families. Monthly service packages for bookkeeping and payroll. \u00a9 2020 Cedar & Stone\u2026"
+     },
+     "succession": {
+      "page": "about",
+      "text": "\u2026Margaret Olsen, founder, opened the firm in 1985. As she plans her retirement, she is focused on succession so clients keep the same care. Our\u2026"
+     }
+    },
+    "family_owned": false,
+    "founded_year": 1985,
+    "franchise": false,
+    "hiring": false,
+    "industry_guess": "Accounting",
+    "owner_name": "Margaret Olsen",
+    "pages_crawled": [
+     "about",
+     "contact",
+     "home",
+     "services"
+    ],
+    "pe_backed": false,
+    "phones": [
+     "(608) 555-0170"
+    ],
+    "reachable": true,
+    "recurring_terms": [
+     "monthly service",
+     "annual inspections"
+    ],
+    "socials": {},
+    "succession": true,
+    "tech": {
+     "analytics": false,
+     "cms": null,
+     "https": true,
+     "live_chat": false,
+     "marketing_automation": false,
+     "mobile_friendly": true,
+     "online_booking": false
+    },
+    "testimonials": false,
+    "years_in_business": 41
+   },
+   "stage": "new",
+   "state": "WI",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": true
+   },
+   "tier": "A",
+   "years_in_business": 41
+  }
+ },
+ "generated_at": "2026-09-16T16:31:17+00:00",
+ "leads": [
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 37 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 42 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "HVAC is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: maintenance plan, service agreements"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Website mentions retirement or succession"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Room to modernize: site last updated around 2018, no online booking, not mobile friendly"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Have direct email, phone, owner name"
+    }
+   ],
+   "city": "Phoenix",
+   "confidence": 100,
+   "domain": "reyescomfort.test",
+   "email": "frank@reyescomfort.test",
+   "email_status": "valid",
+   "employees": 42,
+   "flags": [],
+   "id": 1,
+   "industry": "HVAC",
+   "name": "Reyes Comfort Heating & Air",
+   "owner_name": "Frank Reyes",
+   "phone": "(602) 555-0141",
+   "revenue_estimate": "$5M-$10M",
+   "score": 100,
+   "stage": "new",
+   "state": "AZ",
+   "status": "enriched",
+   "tags": {
+    "family_owned": true,
+    "hiring": false,
+    "recurring": true,
+    "succession": true
+   },
+   "tier": "A",
+   "years_in_business": 37
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 41 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 14 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Accounting is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: monthly service, annual inspections"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Website mentions retirement or succession"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 9.3,
+     "ratio": 0.93,
+     "reason": "Room to modernize: site last updated around 2020, no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Have direct email, phone, owner name"
+    }
+   ],
+   "city": "Madison",
+   "confidence": 100,
+   "domain": "cedarstonecpa.test",
+   "email": "margaret@cedarstonecpa.test",
+   "email_status": "valid",
+   "employees": 14,
+   "flags": [],
+   "id": 9,
+   "industry": "Accounting",
+   "name": "Cedar & Stone Accounting",
+   "owner_name": "Margaret Olsen",
+   "phone": "(608) 555-0170",
+   "revenue_estimate": "$1M-$3M",
+   "score": 99,
+   "stage": "new",
+   "state": "WI",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": true
+   },
+   "tier": "A",
+   "years_in_business": 41
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 30 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 30 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Landscaping is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: annual service, maintenance agreements"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 10.5,
+     "ratio": 0.7,
+     "reason": "Long-running family business, likely thinking about the next generation"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Room to modernize: site last updated around 2016, no online booking, not mobile friendly"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Have direct email, phone, owner name"
+    }
+   ],
+   "city": "Charlotte",
+   "confidence": 100,
+   "domain": "oakhavenlandscaping.test",
+   "email": "tom@oakhavenlandscaping.test",
+   "email_status": "valid",
+   "employees": 30,
+   "flags": [],
+   "id": 4,
+   "industry": "Landscaping",
+   "name": "Oakhaven Landscaping",
+   "owner_name": "Tom Whitfield",
+   "phone": "(704) 555-0122",
+   "revenue_estimate": "$1M-$3M",
+   "score": 96,
+   "stage": "new",
+   "state": "NC",
+   "status": "enriched",
+   "tags": {
+    "family_owned": true,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "A",
+   "years_in_business": 30
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 30 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 25 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Plumbing is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: membership, annual inspections"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 7.5,
+     "ratio": 0.5,
+     "reason": "Founder-led for 30+ years"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 9.3,
+     "ratio": 0.93,
+     "reason": "Room to modernize: site last updated around 2021, no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 7.5,
+     "ratio": 0.75,
+     "reason": "Have general inbox, phone, owner name"
+    }
+   ],
+   "city": "Denver",
+   "confidence": 100,
+   "domain": "summitridgeplumbing.test",
+   "email": "service@summitridgeplumbing.test",
+   "email_status": "role",
+   "employees": 25,
+   "flags": [
+    {
+     "level": "good",
+     "text": "Currently hiring, a sign of demand"
+    }
+   ],
+   "id": 2,
+   "industry": "Plumbing",
+   "name": "Summit Ridge Plumbing",
+   "owner_name": "Dale Hughes",
+   "phone": "(303) 555-0199",
+   "revenue_estimate": "$3M-$5M",
+   "score": 89,
+   "stage": "new",
+   "state": "CO",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": true,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "A",
+   "years_in_business": 30
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 48 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 85 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Manufacturing is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No maintenance plans or contracts mentioned"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 7.5,
+     "ratio": 0.5,
+     "reason": "Founder-led for 48+ years"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 9.3,
+     "ratio": 0.93,
+     "reason": "Room to modernize: site last updated around 2019, no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 7.5,
+     "ratio": 0.75,
+     "reason": "Have general inbox, phone, owner name"
+    }
+   ],
+   "city": "Cleveland",
+   "confidence": 100,
+   "domain": "precisionedgemfg.test",
+   "email": "sales@precisionedgemfg.test",
+   "email_status": "role",
+   "employees": 85,
+   "flags": [],
+   "id": 5,
+   "industry": "Manufacturing",
+   "name": "Precision Edge Machining",
+   "owner_name": "Gary Novak",
+   "phone": "(216) 555-0133",
+   "revenue_estimate": "$10M-$20M",
+   "score": 74,
+   "stage": "new",
+   "state": "OH",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "A",
+   "years_in_business": 48
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 15.0,
+     "ratio": 0.75,
+     "reason": "In business about 15 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 75 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "IT Services is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Recurring revenue offers: managed services, monthly plan"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No transition signals found"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 1.0,
+     "ratio": 0.1,
+     "reason": "Already digitally mature"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 7.5,
+     "ratio": 0.75,
+     "reason": "Have general inbox, phone, owner name"
+    }
+   ],
+   "city": "Austin",
+   "confidence": 100,
+   "domain": "brightlineit.test",
+   "email": "hello@brightlineit.test",
+   "email_status": "role",
+   "employees": 75,
+   "flags": [],
+   "id": 3,
+   "industry": "IT Services",
+   "name": "Brightline Managed IT",
+   "owner_name": "Priya Raman",
+   "phone": "(512) 555-0110",
+   "revenue_estimate": "$10M-$20M",
+   "score": 68,
+   "stage": "new",
+   "state": "TX",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "B",
+   "years_in_business": 15
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 54 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 7.5,
+     "ratio": 0.5,
+     "reason": "About 210 employees, just outside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Logistics is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No maintenance plans or contracts mentioned"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 7.5,
+     "ratio": 0.5,
+     "reason": "Founder-led for 54+ years"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 9.3,
+     "ratio": 0.93,
+     "reason": "Room to modernize: site last updated around 2023, no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 7.5,
+     "ratio": 0.75,
+     "reason": "Have general inbox, phone, owner name"
+    }
+   ],
+   "city": "Memphis",
+   "confidence": 100,
+   "domain": "deltafreightlines.test",
+   "email": "dispatch@deltafreightlines.test",
+   "email_status": "role",
+   "employees": 210,
+   "flags": [],
+   "id": 10,
+   "industry": "Logistics",
+   "name": "Delta Freight Lines",
+   "owner_name": "Carl Jennings",
+   "phone": "(901) 555-0102",
+   "revenue_estimate": "$20M-$50M",
+   "score": 67,
+   "stage": "new",
+   "state": "TN",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "B",
+   "years_in_business": 54
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 21 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 22 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Pest Control is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 9.0,
+     "ratio": 0.6,
+     "reason": "Mentions monthly service"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No transition signals found"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 2.9,
+     "ratio": 0.29,
+     "reason": "Already digitally mature"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 5.5,
+     "ratio": 0.55,
+     "reason": "Have general inbox, phone"
+    }
+   ],
+   "city": "Tampa",
+   "confidence": 100,
+   "domain": "harborpointpest.test",
+   "email": "info@harborpointpest.test",
+   "email_status": "role",
+   "employees": 22,
+   "flags": [
+    {
+     "level": "risk",
+     "text": "Franchise location, usually needs franchisor approval to sell"
+    }
+   ],
+   "id": 6,
+   "industry": "Pest Control",
+   "name": "Harbor Point Pest Control",
+   "owner_name": null,
+   "phone": "(813) 555-0190",
+   "revenue_estimate": "$1M-$3M",
+   "score": 52,
+   "stage": "new",
+   "state": "FL",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": 21
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 20.0,
+     "ratio": 1.0,
+     "reason": "In business about 24 years"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 120 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Commercial Cleaning is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 9.0,
+     "ratio": 0.6,
+     "reason": "Mentions service agreements"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No transition signals found"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 6.4,
+     "ratio": 0.64,
+     "reason": "Room to modernize: no online booking"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 5.5,
+     "ratio": 0.55,
+     "reason": "Have general inbox, phone"
+    }
+   ],
+   "city": "Pittsburgh",
+   "confidence": 100,
+   "domain": "keystoneclean.test",
+   "email": "info@keystoneclean.test",
+   "email_status": "role",
+   "employees": 120,
+   "flags": [
+    {
+     "level": "risk",
+     "text": "Appears to already be owned by an investor or parent company"
+    }
+   ],
+   "id": 7,
+   "industry": "Commercial Cleaning",
+   "name": "Keystone Commercial Cleaning",
+   "owner_name": null,
+   "phone": "(412) 555-0155",
+   "revenue_estimate": "$5M-$10M",
+   "score": 46,
+   "stage": "new",
+   "state": "PA",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": 24
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": false,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 6.0,
+     "ratio": 0.3,
+     "reason": "Founding year not found on the website"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 35 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Roofing is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": false,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "succession",
+     "known": false,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "upside",
+     "known": false,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No contact details found"
+    }
+   ],
+   "city": "Minneapolis",
+   "confidence": 43,
+   "domain": "northwindroofing.test",
+   "email": null,
+   "email_status": null,
+   "employees": 35,
+   "flags": [
+    {
+     "level": "watch",
+     "text": "Website shows a bot check. Review it manually."
+    }
+   ],
+   "id": 11,
+   "industry": "Roofing",
+   "name": "Northwind Roofing",
+   "owner_name": null,
+   "phone": null,
+   "revenue_estimate": "$3M-$5M",
+   "score": 42,
+   "stage": "new",
+   "state": "MN",
+   "status": "failed",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": null
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": false,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 6.0,
+     "ratio": 0.3,
+     "reason": "Founding year not found on the website"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 12 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "Electrical is a target industry"
+    },
+    {
+     "key": "recurring",
+     "known": false,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "succession",
+     "known": false,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "upside",
+     "known": false,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No contact details found"
+    }
+   ],
+   "city": "Richmond",
+   "confidence": 43,
+   "domain": "oldtownelectric.test",
+   "email": null,
+   "email_status": null,
+   "employees": 12,
+   "flags": [
+    {
+     "level": "watch",
+     "text": "Website unreachable (Could not resolve host)"
+    }
+   ],
+   "id": 13,
+   "industry": "Electrical",
+   "name": "Old Town Electric",
+   "owner_name": null,
+   "phone": null,
+   "revenue_estimate": "$1M-$3M",
+   "score": 42,
+   "stage": "new",
+   "state": "VA",
+   "status": "failed",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": null
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": true,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 8.0,
+     "ratio": 0.4,
+     "reason": "Only about 6 years old"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 9 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 2.2,
+     "ratio": 0.15,
+     "reason": "Marketing Agency is not in your target list"
+    },
+    {
+     "key": "recurring",
+     "known": true,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 9.0,
+     "ratio": 0.6,
+     "reason": "Mentions retainer"
+    },
+    {
+     "key": "succession",
+     "known": true,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "No transition signals found"
+    },
+    {
+     "key": "upside",
+     "known": true,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 1.4,
+     "ratio": 0.14,
+     "reason": "Already digitally mature"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 4.5,
+     "ratio": 0.45,
+     "reason": "Have general inbox, owner name"
+    }
+   ],
+   "city": "Brooklyn",
+   "confidence": 100,
+   "domain": "lumendigital.test",
+   "email": "hello@lumendigital.test",
+   "email_status": "role",
+   "employees": 9,
+   "flags": [],
+   "id": 8,
+   "industry": "Marketing Agency",
+   "name": "Lumen Digital Studio",
+   "owner_name": "Jess Park",
+   "phone": null,
+   "revenue_estimate": "$1M-$3M",
+   "score": 40,
+   "stage": "new",
+   "state": "NY",
+   "status": "enriched",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": true,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": 6
+  },
+  {
+   "breakdown": [
+    {
+     "key": "maturity",
+     "known": false,
+     "label": "Years in business",
+     "max": 20.0,
+     "points": 6.0,
+     "ratio": 0.3,
+     "reason": "Founding year not found on the website"
+    },
+    {
+     "key": "size",
+     "known": true,
+     "label": "Company size",
+     "max": 15.0,
+     "points": 15.0,
+     "ratio": 1.0,
+     "reason": "About 8 employees, inside your 5\u2013150 range"
+    },
+    {
+     "key": "industry",
+     "known": true,
+     "label": "Industry fit",
+     "max": 15.0,
+     "points": 2.2,
+     "ratio": 0.15,
+     "reason": "Auto Repair is not in your target list"
+    },
+    {
+     "key": "recurring",
+     "known": false,
+     "label": "Recurring revenue",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "succession",
+     "known": false,
+     "label": "Owner transition",
+     "max": 15.0,
+     "points": 3.0,
+     "ratio": 0.2,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "upside",
+     "known": false,
+     "label": "Digital upside",
+     "max": 10.0,
+     "points": 0.0,
+     "ratio": 0.0,
+     "reason": "Website not reviewed"
+    },
+    {
+     "key": "reachability",
+     "known": true,
+     "label": "Owner reachable",
+     "max": 10.0,
+     "points": 10.0,
+     "ratio": 1.0,
+     "reason": "Have direct email, phone, owner name"
+    }
+   ],
+   "city": "Fresno",
+   "confidence": 43,
+   "domain": null,
+   "email": "valleyautofresno@gmail.com",
+   "email_status": "personal_domain",
+   "employees": 8,
+   "flags": [
+    {
+     "level": "watch",
+     "text": "No website on record"
+    }
+   ],
+   "id": 12,
+   "industry": "Auto Repair",
+   "name": "Valley Auto Repair",
+   "owner_name": "Luis Moreno",
+   "phone": "(559) 555-0187",
+   "revenue_estimate": "$500K-$1M",
+   "score": 39,
+   "stage": "new",
+   "state": "CA",
+   "status": "failed",
+   "tags": {
+    "family_owned": false,
+    "hiring": false,
+    "recurring": false,
+    "succession": false
+   },
+   "tier": "C",
+   "years_in_business": null
+  }
+ ],
+ "note": "Pre-computed demo run. Generated by scripts/build_snapshot.py; do not edit by hand.",
+ "raw_industries": {
+  "1": "HVAC",
+  "10": "Logistics",
+  "11": "Roofing",
+  "12": "Auto Repair",
+  "13": "Electrical",
+  "2": "Plumbing",
+  "3": "IT Services",
+  "4": "Landscaping",
+  "5": "Manufacturing",
+  "6": "Pest Control",
+  "7": "Commercial Cleaning",
+  "8": "Marketing Agency",
+  "9": "Accounting"
+ },
+ "settings": {
+  "employees_max": 150,
+  "employees_min": 5,
+  "min_years": 10,
+  "target_industries": [
+   "HVAC",
+   "Plumbing",
+   "Electrical",
+   "Roofing",
+   "Landscaping",
+   "Pest control",
+   "Commercial cleaning",
+   "Accounting",
+   "IT services",
+   "Manufacturing",
+   "Logistics"
+  ],
+  "weights": {
+   "industry": 15,
+   "maturity": 20,
+   "reachability": 10,
+   "recurring": 15,
+   "size": 15,
+   "succession": 15,
+   "upside": 10
+  }
+ },
+ "stats": {
+  "ai_briefs": false,
+  "demo_mode": true,
+  "enriched": 10,
+  "failed": 3,
+  "industries": [
+   "Accounting",
+   "Auto Repair",
+   "Commercial Cleaning",
+   "Electrical",
+   "HVAC",
+   "IT Services",
+   "Landscaping",
+   "Logistics",
+   "Manufacturing",
+   "Marketing Agency",
+   "Pest Control",
+   "Plumbing",
+   "Roofing"
+  ],
+  "pending": 0,
+  "signals": {
+   "direct_email": 4,
+   "owner_transition": 3
+  },
+  "stages": {
+   "contacted": 0,
+   "new": 13,
+   "passed": 0,
+   "shortlist": 0
+  },
+  "tiers": {
+   "A": 5,
+   "B": 2,
+   "C": 6,
+   "D": 0
+  },
+  "total": 13
+ }
+}

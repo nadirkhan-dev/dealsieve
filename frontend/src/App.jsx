@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { api } from "./api.js";
+import { api, IS_STATIC } from "./api.js";
+import { NEEDS_SERVER } from "./staticApi.js";
+import StaticBanner from "./components/StaticBanner.jsx";
 import { STAGES } from "./constants.js";
 import StepBar from "./components/StepBar.jsx";
 import ImportPanel from "./components/ImportPanel.jsx";
@@ -23,6 +25,7 @@ export default function App() {
   const [showSettings, setShowSettings] = useState(false);
   const [error, setError] = useState(null);
   const [exported, setExported] = useState(false);
+  const [blocked, setBlocked] = useState(null);
   const pollRef = useRef(null);
   const fileRef = useRef(null);
 
@@ -33,7 +36,9 @@ export default function App() {
       setLeads(l.items);
       setError(null);
     } catch (e) {
-      setError(`Can't reach the API. Start the backend on port 8000 and reload. (${e.message})`);
+      setError(IS_STATIC
+        ? `Could not load the pre-computed demo data. (${e.message})`
+        : `Can't reach the API. Start the backend on port 8000 and reload. (${e.message})`);
     }
   }, [filters]);
 
@@ -44,7 +49,14 @@ export default function App() {
 
   useEffect(() => () => clearInterval(pollRef.current), []);
 
+  function blockIfStatic() {
+    if (!IS_STATIC) return false;
+    setBlocked(NEEDS_SERVER);
+    return true;
+  }
+
   async function handleImport(fileOrSample) {
+    if (blockIfStatic()) return null;
     const report = fileOrSample === "sample" ? await api.importSample() : await api.importFile(fileOrSample);
     setImportReport(report);
     await refresh();
@@ -52,6 +64,7 @@ export default function App() {
   }
 
   async function startEnrichment(body = {}) {
+    if (blockIfStatic()) return;
     const started = await api.enrich(body);
     if (!started.total) return;
     setJob({ id: started.job_id, total: started.total, done: 0, failed: 0, status: "running" });
@@ -65,6 +78,7 @@ export default function App() {
   }
 
   async function handleClear() {
+    if (blockIfStatic()) return;
     if (!window.confirm("Remove all leads from DealSieve? This can't be undone.")) return;
     await api.clear();
     setImportReport(null);
@@ -74,7 +88,7 @@ export default function App() {
   }
 
   function handleExport() {
-    window.location.href = api.exportUrl(filters);
+    api.download(filters);
     setExported(true);
   }
 
@@ -90,7 +104,7 @@ export default function App() {
         stats={stats}
         activeStage={activeStage}
         onStage={(stage) => setFilters((f) => ({ ...f, stage: stage ? [stage] : [] }))}
-        onImport={() => fileRef.current.click()}
+        onImport={() => (IS_STATIC ? setBlocked(NEEDS_SERVER) : fileRef.current.click())}
         onSettings={() => setShowSettings(true)}
         onClear={handleClear}
       />
@@ -105,8 +119,14 @@ export default function App() {
           <StepBar current={step} />
         </header>
 
+        {IS_STATIC && <StaticBanner />}
         {error && <div className="alert alert-risk" role="alert">{error}</div>}
-        {stats?.demo_mode && hasLeads && (
+        {blocked && (
+          <div className="alert alert-info" role="status">
+            {blocked} <button className="link-btn" onClick={() => setBlocked(null)}>Dismiss</button>
+          </div>
+        )}
+        {!IS_STATIC && stats?.demo_mode && hasLeads && (
           <div className="alert alert-info">Demo mode: websites come from recorded pages in <code>data/demo_sites.json</code>. Set <code>DEMO_MODE=false</code> to read live sites.</div>
         )}
 
