@@ -78,7 +78,7 @@ flowchart LR
 | ORM | SQLAlchemy 2.0 | Same code on SQLite (dev) and Postgres (prod) |
 | Database | **PostgreSQL 16** in production (Neon or Supabase), SQLite locally | JSON columns for signals, zero-setup local dev |
 | AI | Anthropic Messages API (`claude-sonnet-4-6`), optional | Used only for writing, never for the score |
-| Tests / CI | pytest, GitHub Actions | 9 tests covering import, extraction, scoring and the full API flow |
+| Tests / CI | pytest, GitHub Actions | 19 tests covering import, extraction, scoring, franchise detection, demo seeding and the full API flow |
 | Packaging | Multi-stage Dockerfile (Node build → Python slim) | One image serves API and static app |
 
 ### Data storage
@@ -115,6 +115,7 @@ gcloud run deploy dealsieve --source . --region us-central1 --allow-unauthentica
   --set-env-vars DEMO_MODE=true,DATABASE_URL=postgresql://USER:PASS@HOST/db
 ```
 
+- **Data persistence:** if `DATABASE_URL` is unset the app falls back to SQLite *inside the container*. On Render's free tier the filesystem is ephemeral, so leads reset whenever the instance restarts or spins down. That is fine for a demo — with `SEED_DEMO=true` it re-imports and re-scores the sample dataset on the next boot — but set `DATABASE_URL` to a Neon or Supabase Postgres URL for anything you need to keep.
 - **Scaling path:** background enrichment currently runs in-process (fine for one instance and thousands of leads). The next step is moving crawl jobs to a queue (Cloud Tasks or Redis + RQ) so workers scale independently from the API.
 
 ## 5. Run it locally
@@ -153,10 +154,71 @@ cd backend && pytest -q
 
 - `DEMO_MODE=true` serves recorded pages from `data/demo_sites.json`, so the demo is fast, offline and reproducible.
 - `DEMO_MODE=false` crawls real websites. Import any real lead export.
+- `SEED_DEMO=true` (demo mode only, default `false`) imports and scores the sample dataset at startup **if the leads table is empty**, so anyone opening a fresh deployment lands on a populated dashboard instead of an empty state. It runs as a background task, so it never delays startup, and it never touches a database that already has leads.
 
 ### Sample dataset
 
 `data/sample_leads.csv` has 16 rows shaped like a SaaSquatch export, including two duplicates, one row without a name, one company with no website, one unreachable domain and one bot-protected site. **All companies, people and domains are fictional** and use the reserved `.test` domain. Regenerate with `python scripts/make_demo_data.py`.
+
+### Real-world test
+
+The demo dataset is fictional, so the crawler was also run in live mode
+(`DEMO_MODE=false`, `CRAWL_CONCURRENCY=4`) against six real national service
+brands, imported with only name, website, city and industry — no owner, email or
+headcount — so enrichment had to find everything itself. The list is in
+`data/real_leads_test.csv`.
+
+**What the crawler did:** 22 URLs fetched and cached across the six companies.
+Four sites crawled successfully; two were refused and flagged for manual review
+rather than silently scored low — American Residential Services returned a bot
+check, and TruGreen returned HTTP 403. One page
+(`benjaminfranklinplumbing.com/locations/`) hit the 1.5 MB per-page cap and was
+truncated as designed.
+
+**What it extracted** from Roto-Rooter, across 5 pages (home, about, services,
+contact, careers): founded **1935** (91 years), from the sentence *"Highly-trained
+professionals since 1935"* on the home page; phone `(800) 768-6911`; Facebook,
+Instagram and LinkedIn; and a digital-maturity score of 80 (HTTPS, mobile
+friendly, online booking, analytics). Every one of those signals stores the page
+it came from, so the score stays auditable on real data and not just on fixtures.
+
+**What it got wrong, and the fix.** The first live run flagged Terminix and
+ServiceMaster as franchises but **missed Roto-Rooter and Benjamin Franklin
+Plumbing**, because neither uses the word "franchise" on the pages we crawl.
+Franchise detection now also matches a list of known national franchise brands
+against the company name and the home page `<title>` — deliberately not against
+page text, so a local shop advertising "cheaper than Roto-Rooter" is not
+penalised for naming a competitor. Matching on the name also works when a site
+cannot be crawled at all, which is what now catches TruGreen behind its 403.
+After the change, 5 of the 6 are flagged. The exception is American Residential
+Services: it is bot-walled *and* its legal name contains no known brand, so it
+stays unflagged — a real limitation, not a solved case.
+
+| Company | Score before | Score after | Franchise |
+|---|---|---|---|
+| ServiceMaster Clean | 54 C | 54 C | ✅ both runs |
+| Benjamin Franklin Plumbing | 68 B | 53 C | ➕ newly caught |
+| Terminix | 52 C | 52 C | ✅ both runs |
+| Roto-Rooter | 52 C | 37 D | ➕ newly caught |
+| American Residential Services | 32 D | 32 D | ❌ still missed |
+| TruGreen | 32 D | 17 D | ➕ newly caught (name only) |
+
+**These low scores are the correct answer.** National franchise brands are not
+acquisition targets for a searcher: they are far outside the buy box on
+headcount, show no succession language, and carry the franchise deduction. A
+scoring model that ranked them highly would be broken. The run was a test of
+extraction and resilience on messy real HTML, not a search for real leads.
+
+### Where to get real lead lists
+
+- **A SaaSquatch export** is the intended source — the importer already aliases its column names, so the file needs no editing.
+- **Google Places API** — best for targeting trades by geography; a generous free tier.
+- **Apollo.io** — free tier includes exports, and carries headcount plus contact emails.
+- **State business registries** — free, and the registration year is a pre-verified "years in business" signal.
+- **BizBuySell** — businesses already listed for sale, so owner transition is implicit.
+
+A good pairing is a cheap source for the list (Google Places) plus DealSieve's
+crawler for the enrichment you would otherwise buy.
 
 ## 6. API
 
@@ -214,13 +276,13 @@ dealsieve/
 │   │   ├── scoring.py     acquisition fit model
 │   │   ├── brief.py       outreach brief (AI + template)
 │   │   ├── models.py      SQLAlchemy models
-│   │   └── db.py          engine / sessions
+│   │   └── db.py          engine / sessions, SEED_DEMO startup seeding in main.py
 │   ├── tests/
 │   └── requirements.txt
 ├── frontend/src/          React app: App.jsx, components/ (Sidebar, StatCards, FilterBar,
 │                          LeadTable, ScoreBar, LeadDrawer, IcpSettings…), styles.css
-├── data/                  sample CSV + recorded demo websites
-├── scripts/               demo data generator
+├── data/                  sample CSV, recorded demo websites, real-world test list
+├── scripts/               demo data generator, reset_demo.sh / .ps1 (video helper)
 ├── Dockerfile, docker-compose.yml, render.yaml
 └── .github/workflows/ci.yml
 ```
